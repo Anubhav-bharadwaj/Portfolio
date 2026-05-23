@@ -1,0 +1,138 @@
+.experience {
+  position: relative;
+  overflow: hidden;
+}
+
+.experience .bg-glow {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-2);
+  top: 40%;
+  right: -15%;
+}
+
+.timeline {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gradient-primary);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 72px;
+  padding-bottom: 48px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+}
+
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: var(--bg-primary);
+  border-radius: 50%;
+}
+
+.timeline-card {
+  padding: 28px;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.timeline-role {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.timeline-period {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-3);
+  background: rgba(6, 182, 212, 0.1);
+  padding: 4px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(6, 182, 212, 0.15);
+}
+
+.timeline-company {
+  font-size: 0.95rem;
+  color: var(--accent-1);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.timeline-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.timeline-description ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.timeline-description ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+
+.timeline-description ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-3);
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 16px;
+  }
+
+  .timeline-item {
+    padding-left: 52px;
+  }
+
+  .timeline-dot {
+    left: 7px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+  }
+}
