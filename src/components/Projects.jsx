@@ -7,8 +7,8 @@ const projects = [
     title: 'Portfolio Website',
     description: 'A modern, responsive portfolio website built with React and Framer Motion. Features smooth animations, dark theme, and a clean design to showcase projects and skills.',
     tags: ['React', 'CSS3', 'Framer Motion'],
-    github: 'https://github.com/Anubhav-bharadwaj',
-    live: '#',
+    github: 'https://github.com/Anubhav-bharadwaj/Portfolio',
+    live: 'https://anubhavbharadwaj.vercel.app/',
     icon: '🌐',
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     description: 'AgroVision is a smart agriculture platform designed to enhance modern farming through technology-driven insights, crop management, and sustainable agricultural solutions.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Python'],
     github: 'https://github.com/Anubhav-bharadwaj/AgroVision-Frontend',
-    live: '#',
+    live: 'https://agro-vision-detect-blue.vercel.app/',
     icon: '🍃',
   },
 ];
