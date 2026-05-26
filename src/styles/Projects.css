@@ -113,8 +113,50 @@
   color: var(--accent-1);
 }
 
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-body {
+    padding: 20px;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-thumbnail {
+    height: 160px;
+  }
+
+  .project-body {
+    padding: 16px;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+  }
+
+  .project-tag {
+    font-size: 0.68rem;
+    padding: 3px 10px;
+  }
+
+  .project-link {
+    font-size: 0.8rem;
+  }
+
+  .project-links {
+    margin-top: 14px;
+    padding-top: 14px;
   }
 }

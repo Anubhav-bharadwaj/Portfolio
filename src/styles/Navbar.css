@@ -107,24 +107,62 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+@media (max-width: 1024px) {
+  .navbar-links a {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .navbar-cta {
+    padding: 8px 18px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .mobile-toggle {
     display: flex;
+  }
+
+  .mobile-overlay {
+    display: block;
   }
 
   .navbar-links {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: min(280px, 80vw);
     height: 100vh;
+    height: 100dvh;
     flex-direction: column;
     background: rgba(10, 10, 15, 0.97);
     backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     padding: 100px 32px 32px;
     gap: 8px;
     transition: right var(--transition-normal);
     border-left: 1px solid var(--border-color);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .navbar-links.open {
@@ -135,5 +173,28 @@
     font-size: 1.1rem;
     padding: 14px 20px;
     width: 100%;
+  }
+
+  .navbar-logo {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar.scrolled {
+    padding: 8px 0;
+  }
+
+  .navbar-links {
+    width: 100vw;
+    padding: 90px 24px 24px;
+  }
+
+  .navbar-logo {
+    font-size: 1.3rem;
   }
 }

@@ -119,6 +119,8 @@
   color: var(--accent-3);
 }
 
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
 @media (max-width: 768px) {
   .timeline::before {
     left: 16px;
@@ -134,5 +136,46 @@
 
   .timeline-header {
     flex-direction: column;
+  }
+
+  .timeline-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline-item {
+    padding-left: 42px;
+    padding-bottom: 32px;
+  }
+
+  .timeline-dot {
+    left: 4px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-card {
+    padding: 18px;
+  }
+
+  .timeline-role {
+    font-size: 1.05rem;
+  }
+
+  .timeline-company {
+    font-size: 0.88rem;
+  }
+
+  .timeline-description {
+    font-size: 0.85rem;
+  }
+
+  .timeline-period {
+    font-size: 0.72rem;
   }
 }

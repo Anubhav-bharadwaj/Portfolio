@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Navbar.css';
 
@@ -35,6 +35,22 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
+  const closeMobileMenu = useCallback(() => {
+    setMobileOpen(false);
+  }, []);
+
   const handleLinkClick = () => {
     setMobileOpen(false);
   };
@@ -48,6 +64,11 @@ const Navbar = () => {
     >
       <div className="container">
         <a href="#home" className="navbar-logo">AB.</a>
+
+        <div
+          className={`mobile-overlay ${mobileOpen ? 'active' : ''}`}
+          onClick={closeMobileMenu}
+        />
 
         <ul className={`navbar-links ${mobileOpen ? 'open' : ''}`}>
           {navLinks.map((link) => (

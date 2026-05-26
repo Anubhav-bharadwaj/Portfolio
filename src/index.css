@@ -209,11 +209,82 @@ body {
   z-index: 0;
 }
 
-@media (max-width: 768px) {
-  .section {
-    padding: 60px 0;
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large tablets and small desktops (1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 80px 0;
+    --container-max: 960px;
   }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px 0;
+  }
+
   .section-header {
     margin-bottom: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small devices (480px) */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 48px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .section-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 11px 20px;
+    font-size: 0.85rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Very small devices (360px) */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }

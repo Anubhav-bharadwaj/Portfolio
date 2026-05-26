@@ -146,10 +146,27 @@
   margin-top: 4px;
 }
 
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+@media (max-width: 1024px) {
+  .about-content {
+    gap: 40px;
+  }
+
+  .about-image-wrapper {
+    width: 300px;
+    height: 360px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .about-image-side {
+    order: -1;
   }
 
   .about-image-wrapper {
@@ -157,7 +174,65 @@
     height: 340px;
   }
 
+  .about-text-side h3 {
+    font-size: 1.6rem;
+  }
+
   .about-stats {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image-wrapper {
+    width: 240px;
+    height: 300px;
+  }
+
+  .about-code-display {
+    font-size: 0.75rem;
+    padding: 20px;
+    line-height: 1.7;
+  }
+
+  .about-text-side h3 {
+    font-size: 1.4rem;
+  }
+
+  .about-text-side p {
+    font-size: 0.92rem;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .about-stat {
+    padding: 14px 8px;
+  }
+
+  .about-stat-number {
+    font-size: 1.4rem;
+  }
+
+  .about-stat-label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-image-wrapper {
+    width: 220px;
+    height: 270px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+
+  .about-stat-number {
+    font-size: 1.2rem;
   }
 }

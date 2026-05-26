@@ -74,9 +74,58 @@
   color: var(--accent-1);
 }
 
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 14px;
+  }
+
+  .skills-category {
+    margin-bottom: 36px;
+  }
+
+  .skills-category-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 20px 12px;
+  }
+
+  .skill-card .skill-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .skill-card .skill-name {
+    font-size: 0.85rem;
+  }
+
+  .skill-card .skill-level {
+    font-size: 0.68rem;
+  }
+
+  .skills-category-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    gap: 8px;
+  }
+
+  .skill-card {
+    padding: 16px 8px;
   }
 }
